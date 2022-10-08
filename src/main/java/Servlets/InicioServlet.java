@@ -1,4 +1,4 @@
-package com.example.demo1;
+package Servlets;
 
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
@@ -6,11 +6,11 @@ import jakarta.servlet.annotation.*;
 
 import java.io.IOException;
 
-@WebServlet(name = "ContactoServlet", value = "/contacto")
-public class ContactoServlet extends HttpServlet {
+@WebServlet(name = "InicioServlet", value = "/inicio")
+public class InicioServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        getServletContext().getRequestDispatcher("/views/contacto.jsp").forward(request, response);
+        getServletContext().getRequestDispatcher("/views/inicio.jsp").forward(request, response);
     }
 
     @Override
